@@ -21,11 +21,15 @@ public class TicTacToe {
   }
   
   public boolean checkMove(int move, int x, int y) {
-    if(move!=0 && x >= 0 && x < 3 && y >= 0 && y < 3 && board[y][x]==0){
-      return(true);
+  
+    if(move!=0 && x >= 0 && x < 3 && y >= 0 && y < 3 && board[y][x]==0) {
+      
+      return true;
+    
     }
-    return(false);
- 
+    
+    return false;
+  
   }
 
   public void updateBoard(int move, int x, int y) {

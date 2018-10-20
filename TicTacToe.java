@@ -15,9 +15,31 @@ public class TicTacToe {
   * @param args
   */
   public void main(String[] args) {
- 
-    
-  
+    int player = 1;
+    int row;
+    int col;
+    scanner.Input=new scanner(System.in);
+    System.out.print("Welcome to TicTacToe");
+    while(!checkWin()){
+      System.out.println("Where would you like to place your piece?/n Row: );
+      row = Input.nextInt();
+      System.out.println("Col: ")
+      col = Input.nextInt();
+      if(checkMove(player,col,row))
+        {
+          updateBoard(player,col,row);
+          if(player==1){player=0};
+          else{player=1}
+        }
+      else
+        {
+          System.out.println(Invalid Input)
+        }
+      if(checkWin)
+      {
+        System.out.println("Congrats You Won!!");
+        Break;
+      }
   }
   
   public boolean checkMove(int move, int x, int y) {
